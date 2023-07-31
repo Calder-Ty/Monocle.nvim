@@ -11,3 +11,7 @@ Then add this in your configuration
 monocle = require('monocle')
 monocle.colorscheme()
 ```
+
+## Example
+
+![monocle example](./media/example.png)
