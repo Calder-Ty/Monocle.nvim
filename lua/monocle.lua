@@ -160,6 +160,14 @@ function M.load_colors()
 		GitGutterChange=	{fg=colors.cobalt};
 		GitGutterDelete=	{fg=colors.darkred};
 
+		-- Fugitive
+		diffOldFile= {fg=colors.darkred};
+		diffNewFile= {fg=colors.darkgreen};
+
+		diffAdded=		{fg=colors.seagreen };
+		diffRemoved=	{fg=colors.darkred };
+		gitDiff=		{fg=colors.grey };
+
 		-- LangStuff, Push this to other places probably
 		RustInlay = {fg=colors.gray};
 		pythonEscape = {fg="#ae81ff"};
@@ -186,6 +194,7 @@ function M.colorscheme()
 	end
 end
 
+M.colorscheme()
 
 return M
 
