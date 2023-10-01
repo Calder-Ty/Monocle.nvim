@@ -163,7 +163,11 @@ function M.load_colors()
 		-- LangStuff, Push this to other places probably
 		RustInlay = {fg=colors.gray};
 		pythonEscape = {fg="#ae81ff"};
+
 	}
+	-- Treesitter stuff
+	syntax["@attribute.zig"] = {fg=colors.violet};
+	syntax["@lsp.type.operator.zig"] = {fg=colors.lightmagenta};
 	return syntax
 end
 
