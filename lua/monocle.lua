@@ -176,6 +176,8 @@ function M.load_colors()
 	-- Treesitter stuff
 	syntax["@attribute.zig"] = {fg=colors.violet};
 	syntax["@lsp.type.operator.zig"] = {fg=colors.lightmagenta};
+	-- TODO: This is TODO NOTE
+	syntax["@text.todo"] = {fg=colors.gray,			bg=colors.red,		gui=styles.rb}
 	return syntax
 end
 
