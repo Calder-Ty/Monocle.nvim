@@ -174,10 +174,12 @@ function M.load_colors()
 
 	}
 	-- Treesitter stuff
+	-- Treesitter TODO
+	-- FIXME:
 	syntax["@attribute.zig"] = {fg=colors.violet};
 	syntax["@lsp.type.operator.zig"] = {fg=colors.lightmagenta};
-	-- TODO: This is TODO NOTE
-	syntax["@text.todo"] = {fg=colors.gray,			bg=colors.red,		gui=styles.rb}
+	syntax["@text.todo"] = {bg=colors.darkgreen,		fg=colors.none,		gui=colors.none}
+	syntax["@text.danger"] = {fg=colors.gray,			bg=colors.red,		gui=styles.rb}
 	return syntax
 end
 
