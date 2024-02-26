@@ -184,8 +184,8 @@ function M.load_colors()
 	-- Semantic highlights
 	syntax["@lsp.type.operator.zig"] = {fg=colors.lightmagenta};
 	syntax["@lsp.type.namespace"] = {fg=colors.violet, gui=styles.i};
-	syntax["@lsp.type.property"] = {fg=colors.seagreen, gui=styles.i};
-	syntax["@lsp.type.parameter"] = {fg=colors.cyan, gui=styles.i}
+	syntax["@lsp.type.property"] = {fg=colors.cobalt, gui=styles.i};
+	syntax["@lsp.type.parameter"] = {fg="#80ffff", gui=styles.i}
 	syntax["@lsp.type.label"] = {fg=colors.red}
 
 	return syntax
