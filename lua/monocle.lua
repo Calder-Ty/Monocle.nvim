@@ -10,33 +10,33 @@ M.colors = {
 
 	brown=			'#ff8080';
 
- 	yellow=			'#ceb489';
+	yellow=			'#ceb489';
 	lightyellow=	'#e6db74';
 
-    darkgreen=		'#088001';
+	darkgreen=		'#088001';
 	green=			'#46830c';
-    seagreen=		'#5e8b56';
+	seagreen=		'#5e8b56';
 
 	lightblue=		'#3a8998';
-    blue=			'#3f76ce';
+	blue=			'#3f76ce';
 	slateblue=		'#106474';
 	darkblue =		'#204a87';
 	cobalt=			"#243955";
 
-    cyan=			'#a1efe4';
-    lightcyan=		'#66d9ef';
+	cyan=			'#a1efe4';
+	lightcyan=		'#66d9ef';
 	specialcyan=    '#078c8c';
 
 	lightpurple=	'#ff80ff';
 	violet=			'#8f40ff';
 
 	white=			'#f8f8f2';
-    lightgray=		'#adafaf';
-    gray=			'#7d7d7d';
-    darkgray=		'#434343';
+	lightgray=		'#adafaf';
+	gray=			'#7d7d7d';
+	darkgray=		'#434343';
 	offblack=		'#303044';
 	shaddow=		'#272822';
-    black=			'#222222';
+	black=			'#222222';
 
 	none=			'NONE';
 }
@@ -177,9 +177,17 @@ function M.load_colors()
 	-- TODO:
 	-- FIXME:
 	syntax["@attribute.zig"] = {fg=colors.violet};
-	syntax["@lsp.type.operator.zig"] = {fg=colors.lightmagenta};
-	syntax["@text.todo"] = {bg=colors.cyan,		fg=colors.black,		gui=colors.none}
+
+	syntax["@text.todo"] = {bg=colors.darkgreen,		fg=colors.black,		gui=colors.none}
 	syntax["@text.danger"] = {fg=colors.gray,			bg=colors.red,		gui=styles.rb}
+
+	-- Semantic highlights
+	syntax["@lsp.type.operator.zig"] = {fg=colors.lightmagenta};
+	syntax["@lsp.type.namespace"] = {fg=colors.violet, gui=styles.i};
+	syntax["@lsp.type.property"] = {fg=colors.seagreen, gui=styles.i};
+	syntax["@lsp.type.parameter"] = {fg=colors.cyan, gui=styles.i}
+	syntax["@lsp.type.label"] = {fg=colors.red}
+
 	return syntax
 end
 
