@@ -9,8 +9,9 @@ M.colors = {
 
 
 	brown=			'#ff8080';
+	lightbrown=		'#f06795';
 
-	yellow=			'#ceb489';
+	yellow=			'#ffbf80';
 	lightyellow=	'#e6db74';
 
 	darkgreen=		'#088001';
@@ -18,6 +19,7 @@ M.colors = {
 	seagreen=		'#5e8b56';
 
 	lightblue=		'#3a8998';
+	eyeblue=		'#3a5A99';
 	blue=			'#3f76ce';
 	slateblue=		'#106474';
 	darkblue =		'#204a87';
@@ -112,7 +114,7 @@ function M.load_colors()
 		Float=			{fg=colors.lightpurple,		bg=colors.none,		gui=colors.none};
 		Folded=			{fg=colors.gray,			bg=colors.shadow,	gui=colors.none};
 		Function=		{fg=colors.lightmagenta,	bg=colors.none,		gui=colors.none};
-		Identifier=		{fg=colors.lightcyan,		bg=colors.none,		gui=styles.italic};
+		Identifier=		{fg=colors.lightcyan,		bg=colors.none,		gui=styles.none};
 		Keyword=		{fg=colors.specialcyan,		bg=colors.none,		gui=styles.bold};
 		Label=			{fg=colors.lightyellow,		bg=colors.none,		gui=colors.none};
 		NonText=		{fg=colors.none,			bg=colors.none,		gui=colors.none};
@@ -124,7 +126,7 @@ function M.load_colors()
 		Special=		{fg=colors.specialcyan,		bg=colors.none,		gui=colors.none};
 		SpecialKey=		{fg=colors.darkgray,		bg=colors.offblack, gui=colors.none};
 		Statement=		{fg=colors.lightblue,		bg=colors.none,		gui=colors.none};
-		StorageClass=	{fg=colors.lightcyan,		bg=colors.none,		gui=styles.italic};
+		StorageClass=	{fg=colors.lightcyan,		bg=colors.none,		gui=styles.none};
 		String=			{fg=colors.seagreen,		bg=colors.none,		gui=colors.none};
 		Tag=			{fg=colors.red,				bg=colors.none,		gui=colors.none};
 		Title=			{fg=colors.white,			bg=colors.none,		gui=styles.bold};
@@ -150,9 +152,6 @@ function M.load_colors()
 		DiagnosticVirtualTextInfo=  {fg=colors.white,	bg=colors.none};
 		DiagnosticVirtualTextWarn=  {fg=colors.brown,	bg=colors.none};
 
-		-- adjustments
-
-
 		-- Supported Plugins:
 		--
 		-- GitGutter
@@ -177,6 +176,7 @@ function M.load_colors()
 	-- TODO:
 	-- FIXME:
 	syntax["@attribute.zig"] = {fg=colors.violet};
+	syntax["@variable"] = {fg=colors.lightcyan, gui=styles.none};
 
 	syntax["@text.todo"] = {bg=colors.darkgreen,		fg=colors.black,		gui=colors.none}
 	syntax["@text.danger"] = {fg=colors.gray,			bg=colors.red,		gui=styles.rb}
@@ -184,8 +184,9 @@ function M.load_colors()
 	-- Semantic highlights
 	syntax["@lsp.type.operator.zig"] = {fg=colors.lightmagenta};
 	syntax["@lsp.type.namespace"] = {fg=colors.violet, gui=styles.i};
-	syntax["@lsp.type.property"] = {fg=colors.cobalt, gui=styles.i};
-	syntax["@lsp.type.parameter"] = {fg="#80ffff", gui=styles.i}
+	syntax["@lsp.type.property"] = {fg=colors.lightbrown};
+	syntax["@lsp.type.parameter"] = {fg=colors.eyeblue};
+	syntax["@lsp.type.variable"] = {fg=colors.lightcyan, gui=styles.none};
 	syntax["@lsp.type.label"] = {fg=colors.red}
 
 	return syntax
