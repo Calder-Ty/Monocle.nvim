@@ -33,6 +33,7 @@ M.colors = {
 
 	lightpurple=	'#ff80ff';
 	violet=			'#8f40ff';
+	deeppurple=		'#6B04FB';
 
 	white=			'#f8f8f2';
 	lightgray=		'#adafaf';
@@ -133,7 +134,7 @@ function M.load_colors()
 		Tag=			{fg=colors.red,				bg=colors.none,		gui=colors.none};
 		Title=			{fg=colors.white,			bg=colors.none,		gui=styles.bold};
 		Todo=			{fg=colors.gray,			bg=colors.red,		gui=styles.rb};
- 		Type=			{fg=colors.blue,			bg=colors.none,		gui=colors.none};
+ 		Type=			{fg=colors.deeppurple,			bg=colors.none,		gui=colors.none};
 		Underlined=		{fg=colors.none,			bg=colors.none,		gui=styles.underline};
 		Whitespace=		{fg=colors.darkgray											};
 
@@ -187,7 +188,7 @@ function M.load_colors()
 	syntax["@lsp.type.operator.zig"] = {fg=colors.lightmagenta};
 	syntax["@lsp.type.namespace"] = {fg=colors.violet};
 	syntax["@lsp.type.property"] = {fg=colors.lightbrown};
-	syntax["@lsp.type.parameter"] = {fg=colors.limegreen};
+	syntax["@lsp.type.parameter"] = {fg=colors.blue};
 	syntax["@lsp.type.variable"] = {fg=colors.lightcyan, gui=styles.none};
 	syntax["@lsp.type.label"] = {fg=colors.red};
 	syntax["@lsp.mod.declaration"] = {gui=styles.i};
