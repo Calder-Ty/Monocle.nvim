@@ -175,7 +175,7 @@ function M.load_colors()
 	}
 	-- Treesitter stuff
 	syntax["@attribute.zig"] = {fg=colors.violet};
-	syntax["@variable"] = {fg=colors.lightcyan, gui=styles.none};
+	syntax["@variable"] = {gui=styles.none};
 
 	-- TODO:
 	syntax["@text.todo"] = {gui=styles.rb}
@@ -184,12 +184,12 @@ function M.load_colors()
 
 	-- Semantic highlights
 	syntax["@lsp.type.operator.zig"] = {fg=colors.lightmagenta};
-	syntax["@lsp.type.namespace"] = {fg=colors.violet, gui=styles.i};
-	syntax["@lsp.type.property"] = {fg=colors.cobalt, gui=styles.i};
-	syntax["@lsp.type.parameter"] = {fg=colors.celeste, gui=styles.i}
+	syntax["@lsp.type.namespace"] = {fg=colors.violet};
 	syntax["@lsp.type.property"] = {fg=colors.lightbrown};
+	syntax["@lsp.type.parameter"] = {fg=colors.green, bg=colors.red};
 	syntax["@lsp.type.variable"] = {fg=colors.lightcyan, gui=styles.none};
-	syntax["@lsp.type.label"] = {fg=colors.red}
+	syntax["@lsp.type.label"] = {fg=colors.red};
+	syntax["@lsp.mod.declaration"] = {gui=styles.i};
 
 	return syntax
 end
