@@ -188,7 +188,6 @@ function M.load_colors()
 	syntax["@lsp.type.property"] = {fg=colors.cobalt, gui=styles.i};
 	syntax["@lsp.type.parameter"] = {fg=colors.celeste, gui=styles.i}
 	syntax["@lsp.type.property"] = {fg=colors.lightbrown};
-	syntax["@lsp.type.parameter"] = {fg=colors.eyeblue};
 	syntax["@lsp.type.variable"] = {fg=colors.lightcyan, gui=styles.none};
 	syntax["@lsp.type.label"] = {fg=colors.red}
 
