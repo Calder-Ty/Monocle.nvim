@@ -177,7 +177,7 @@ function M.load_colors()
 	-- Treesitter stuff
 	syntax["@attribute.zig"] = {fg=colors.violet};
 	syntax["@variable"] = {gui=styles.none};
-	syntax["@type.qualifiers"] = {fg=styles.cobalt};
+	syntax["@type.qualifier"] = {fg=styles.cobalt};
 
 	-- TODO:
 	syntax["@text.todo"] = {gui=styles.rb}
