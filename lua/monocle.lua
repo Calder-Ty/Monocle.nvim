@@ -7,7 +7,6 @@ M.colors = {
 	darkred=		'#79092f';
 	lightmagenta=	'#c72c77';
 
-
 	brown=			'#ff8080';
 	lightbrown=		'#f06795';
 
@@ -26,9 +25,9 @@ M.colors = {
 	darkblue =		'#204a87';
 	cobalt=			"#243955";
 
-	celeste=		'#1db4d0';
 	cyan=			'#a1efe4';
 	lightcyan=		'#66d9ef';
+	celeste=		'#1db4d0';
 	specialcyan=    '#078c8c';
 
 	lightpurple=	'#ff80ff';
@@ -178,6 +177,7 @@ function M.load_colors()
 	-- Treesitter stuff
 	syntax["@attribute.zig"] = {fg=colors.violet};
 	syntax["@variable"] = {gui=styles.none};
+	syntax["@type.qualifiers"] = {fg=styles.cobalt};
 
 	-- TODO:
 	syntax["@text.todo"] = {gui=styles.rb}
