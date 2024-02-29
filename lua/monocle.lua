@@ -3,9 +3,12 @@ local api =	vim.api;
 local M = {};
 
 M.colors = {
+	rose=			'#fA3592';
 	red=			'#f92672';
-	darkred=		'#79092f';
 	lightmagenta=	'#c72c77';
+	darkred=		'#79092f';
+
+	orange=			'#FFb436';
 
 	brown=			'#ff8080';
 	lightbrown=		'#f06795';
@@ -133,7 +136,7 @@ function M.load_colors()
 		Tag=			{fg=colors.red,				bg=colors.none,		gui=colors.none};
 		Title=			{fg=colors.white,			bg=colors.none,		gui=styles.bold};
 		Todo=			{fg=colors.gray,			bg=colors.red,		gui=styles.rb};
- 		Type=			{fg=colors.deeppurple,			bg=colors.none,		gui=colors.none};
+ 		Type=			{fg=colors.orange,			bg=colors.none,		gui=colors.none};
 		Underlined=		{fg=colors.none,			bg=colors.none,		gui=styles.underline};
 		Whitespace=		{fg=colors.darkgray											};
 
