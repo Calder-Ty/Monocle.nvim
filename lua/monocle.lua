@@ -186,7 +186,7 @@ function M.load_colors()
 	syntax["@lsp.type.operator.zig"] = {fg=colors.lightmagenta};
 	syntax["@lsp.type.namespace"] = {fg=colors.violet};
 	syntax["@lsp.type.property"] = {fg=colors.lightbrown};
-	syntax["@lsp.type.parameter"] = {fg=colors.green, bg=colors.red};
+	syntax["@lsp.type.parameter"] = {fg=colors.green};
 	syntax["@lsp.type.variable"] = {fg=colors.lightcyan, gui=styles.none};
 	syntax["@lsp.type.label"] = {fg=colors.red};
 	syntax["@lsp.mod.declaration"] = {gui=styles.i};
