@@ -16,6 +16,7 @@ M.colors = {
 
 	darkgreen=		'#088001';
 	green=			'#46830c';
+	limegreen=		'#98f842';
 	seagreen=		'#5e8b56';
 
 	lightblue=		'#3a8998';
@@ -186,7 +187,7 @@ function M.load_colors()
 	syntax["@lsp.type.operator.zig"] = {fg=colors.lightmagenta};
 	syntax["@lsp.type.namespace"] = {fg=colors.violet};
 	syntax["@lsp.type.property"] = {fg=colors.lightbrown};
-	syntax["@lsp.type.parameter"] = {fg=colors.green};
+	syntax["@lsp.type.parameter"] = {fg=colors.limegreen};
 	syntax["@lsp.type.variable"] = {fg=colors.lightcyan, gui=styles.none};
 	syntax["@lsp.type.label"] = {fg=colors.red};
 	syntax["@lsp.mod.declaration"] = {gui=styles.i};
