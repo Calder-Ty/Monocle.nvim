@@ -23,6 +23,7 @@ M.colors = {
 	darkblue =		'#204a87';
 	cobalt=			"#243955";
 
+	celeste=		'#1db4d0';
 	cyan=			'#a1efe4';
 	lightcyan=		'#66d9ef';
 	specialcyan=    '#078c8c';
@@ -174,18 +175,18 @@ function M.load_colors()
 
 	}
 	-- Treesitter stuff
-	-- TODO:
-	-- FIXME:
 	syntax["@attribute.zig"] = {fg=colors.violet};
 
-	syntax["@text.todo"] = {bg=colors.darkgreen,		fg=colors.black,		gui=colors.none}
+	-- TODO:
+	syntax["@text.todo"] = {gui=styles.rb}
+	-- FIXME:
 	syntax["@text.danger"] = {fg=colors.gray,			bg=colors.red,		gui=styles.rb}
 
 	-- Semantic highlights
 	syntax["@lsp.type.operator.zig"] = {fg=colors.lightmagenta};
 	syntax["@lsp.type.namespace"] = {fg=colors.violet, gui=styles.i};
 	syntax["@lsp.type.property"] = {fg=colors.cobalt, gui=styles.i};
-	syntax["@lsp.type.parameter"] = {fg="#80ffff", gui=styles.i}
+	syntax["@lsp.type.parameter"] = {fg=colors.celeste, gui=styles.i}
 	syntax["@lsp.type.label"] = {fg=colors.red}
 
 	return syntax
