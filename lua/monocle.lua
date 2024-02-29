@@ -19,7 +19,7 @@ M.colors = {
 	seagreen=		'#5e8b56';
 
 	lightblue=		'#3a8998';
-	eyeblue=		'#3a5A99';
+	seablue=		'#546883';
 	blue=			'#3f76ce';
 	slateblue=		'#106474';
 	darkblue =		'#204a87';
@@ -177,7 +177,7 @@ function M.load_colors()
 	-- Treesitter stuff
 	syntax["@attribute.zig"] = {fg=colors.violet};
 	syntax["@variable"] = {gui=styles.none};
-	syntax["@type.qualifier"] = {fg=colors.cobalt};
+	syntax["@type.qualifier"] = {fg=colors.seablue};
 
 	-- TODO:
 	syntax["@text.todo"] = {gui=styles.rb}
