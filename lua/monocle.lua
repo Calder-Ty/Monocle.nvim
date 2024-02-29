@@ -9,6 +9,7 @@ M.colors = {
 	darkred=		'#79092f';
 
 	orange=			'#FFb436';
+	creamsicle=		'#EA9507';
 
 	brown=			'#ff8080';
 	lightbrown=		'#f06795';
@@ -136,7 +137,7 @@ function M.load_colors()
 		Tag=			{fg=colors.red,				bg=colors.none,		gui=colors.none};
 		Title=			{fg=colors.white,			bg=colors.none,		gui=styles.bold};
 		Todo=			{fg=colors.gray,			bg=colors.red,		gui=styles.rb};
- 		Type=			{fg=colors.orange,			bg=colors.none,		gui=colors.none};
+ 		Type=			{fg=colors.slateblue,		bg=colors.none,		gui=stylesb};
 		Underlined=		{fg=colors.none,			bg=colors.none,		gui=styles.underline};
 		Whitespace=		{fg=colors.darkgray											};
 
@@ -181,6 +182,9 @@ function M.load_colors()
 	syntax["@attribute.zig"] = {fg=colors.violet};
 	syntax["@variable"] = {gui=styles.none};
 	syntax["@type.qualifier"] = {fg=colors.seablue};
+	syntax["@keyword.return"] = {fg=colors.rose};
+	syntax["@keyword.repeat"] = {fg=colors.rose};
+	syntax["@keyword.conditional"] = {fg=colors.rose};
 
 	-- TODO:
 	syntax["@text.todo"] = {gui=styles.rb}
@@ -192,7 +196,7 @@ function M.load_colors()
 	syntax["@lsp.type.namespace"] = {fg=colors.violet};
 	syntax["@lsp.type.property"] = {fg=colors.lightbrown};
 	syntax["@lsp.type.parameter"] = {fg=colors.blue};
-	syntax["@lsp.type.variable"] = {fg=colors.lightcyan, gui=styles.none};
+	syntax["@lsp.type.variable"] = {fg=colors.celeste, gui=styles.none};
 	syntax["@lsp.type.label"] = {fg=colors.red};
 	syntax["@lsp.mod.declaration"] = {gui=styles.i};
 
