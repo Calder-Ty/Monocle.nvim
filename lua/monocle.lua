@@ -136,6 +136,7 @@ function M.load_colors()
 		String=			{fg=colors.seagreen,		bg=colors.none,		gui=colors.none};
 		Tag=			{fg=colors.red,				bg=colors.none,		gui=colors.none};
 		Title=			{fg=colors.white,			bg=colors.none,		gui=styles.bold};
+		Todo=			{fg=colors.none,			bg=colors.none,		gui=colors.none};
  		Type=			{fg=colors.slateblue,		bg=colors.none,		gui=stylesb};
 		Underlined=		{fg=colors.none,			bg=colors.none,		gui=styles.underline};
 		Whitespace=		{fg=colors.darkgray											};
@@ -184,11 +185,6 @@ function M.load_colors()
 	syntax["@keyword.return"] = {fg=colors.rose};
 	syntax["@keyword.repeat"] = {fg=colors.rose};
 	syntax["@keyword.conditional"] = {fg=colors.rose};
-
-	-- TODO:
-	syntax["@text.todo"] = {gui=styles.rb}
-	-- FIXME:
-	syntax["@text.danger"] = {fg=colors.gray,			bg=colors.red,		gui=styles.rb}
 
 	-- Semantic highlights
 	syntax["@lsp.type.operator.zig"] = {fg=colors.lightmagenta};
