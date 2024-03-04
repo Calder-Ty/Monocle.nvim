@@ -112,7 +112,7 @@ function M.load_colors()
 		-- Text types
 		Boolean=		{fg=colors.lightpurple,		bg=colors.none,		gui=colors.none};
 		Character=		{fg=colors.lightpurple,		bg=colors.none,		gui=colors.none};
-		Comment=		{fg=colors.darkgreen,		bg=colors.none,		gui=colors.none};
+		Comment=		{fg=colors.darkgreen,		bg=colors.offblack,		gui=colors.none};
 		Conditional=	{fg=colors.red,				bg=colors.none,		gui=styles.i};
 		Constant=		{fg=colors.lightpurple,		bg=colors.none,		gui=colors.none};
 		Define=			{fg=colors.red,				bg=colors.none,		gui=colors.none};
