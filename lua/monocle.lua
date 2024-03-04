@@ -124,7 +124,7 @@ function M.load_colors()
 		Keyword=		{fg=colors.specialcyan,		bg=colors.none,		gui=styles.bold};
 		Label=			{fg=colors.lightyellow,		bg=colors.none,		gui=colors.none};
 		NonText=		{fg=colors.none,			bg=colors.none,		gui=colors.none};
-		Normal=			{fg=colors.lightgray,		bg=colors.black,		gui=colors.none};
+		Normal=			{fg=colors.lightgray,		bg=colors.none,		gui=colors.none};
 		Number=			{fg=colors.lightpurple,		bg=colors.none,		gui=colors.none};
 		Operator=		{fg=colors.lightmagenta,	bg=colors.none,		gui=colors.none};
 		PreProc=		{fg=colors.violet,			bg=colors.none,		gui=colors.none};
