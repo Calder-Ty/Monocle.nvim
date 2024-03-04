@@ -136,7 +136,7 @@ function M.load_colors()
 		String=			{fg=colors.seagreen,		bg=colors.none,		gui=colors.none};
 		Tag=			{fg=colors.red,				bg=colors.none,		gui=colors.none};
 		Title=			{fg=colors.white,			bg=colors.none,		gui=styles.bold};
-		Todo=			{fg=colors.none,			bg=colors.none,		gui=colors.none};
+		Todo=			{fg=colors.black,			bg=colors.darkgreen,gui=colors.none};
  		Type=			{fg=colors.slateblue,		bg=colors.none,		gui=stylesb};
 		Underlined=		{fg=colors.none,			bg=colors.none,		gui=styles.underline};
 		Whitespace=		{fg=colors.darkgray											};
