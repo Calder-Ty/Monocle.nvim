@@ -3,10 +3,13 @@ local api =	vim.api;
 local M = {};
 
 M.colors = {
+	rose=			'#fA3592';
 	red=			'#f92672';
-	darkred=		'#79092f';
 	lightmagenta=	'#c72c77';
+	darkred=		'#79092f';
 
+	orange=			'#FFb436';
+	creamsicle=		'#EA9507';
 
 	brown=			'#ff8080';
 	lightbrown=		'#f06795';
@@ -16,10 +19,11 @@ M.colors = {
 
 	darkgreen=		'#088001';
 	green=			'#46830c';
+	limegreen=		'#98f842';
 	seagreen=		'#5e8b56';
 
 	lightblue=		'#3a8998';
-	eyeblue=		'#3a5A99';
+	seablue=		'#546883';
 	blue=			'#3f76ce';
 	slateblue=		'#106474';
 	darkblue =		'#204a87';
@@ -27,10 +31,12 @@ M.colors = {
 
 	cyan=			'#a1efe4';
 	lightcyan=		'#66d9ef';
+	celeste=		'#1db4d0';
 	specialcyan=    '#078c8c';
 
 	lightpurple=	'#ff80ff';
 	violet=			'#8f40ff';
+	deeppurple=		'#6B04FB';
 
 	white=			'#f8f8f2';
 	lightgray=		'#adafaf';
@@ -130,7 +136,7 @@ function M.load_colors()
 		String=			{fg=colors.seagreen,		bg=colors.none,		gui=colors.none};
 		Tag=			{fg=colors.red,				bg=colors.none,		gui=colors.none};
 		Title=			{fg=colors.white,			bg=colors.none,		gui=styles.bold};
- 		Type=			{fg=colors.blue,			bg=colors.none,		gui=colors.none};
+ 		Type=			{fg=colors.slateblue,		bg=colors.none,		gui=stylesb};
 		Underlined=		{fg=colors.none,			bg=colors.none,		gui=styles.underline};
 		Whitespace=		{fg=colors.darkgray											};
 
@@ -172,21 +178,26 @@ function M.load_colors()
 
 	}
 	-- Treesitter stuff
-	-- TODO:
-	-- FIXME:
 	syntax["@attribute.zig"] = {fg=colors.violet};
-	syntax["@variable"] = {fg=colors.lightcyan, gui=styles.none};
+	syntax["@variable"] = {gui=styles.none};
+	syntax["@type.qualifier"] = {fg=colors.seablue};
+	syntax["@keyword.return"] = {fg=colors.rose};
+	syntax["@keyword.repeat"] = {fg=colors.rose};
+	syntax["@keyword.conditional"] = {fg=colors.rose};
 
-	syntax["@text.todo"] = {bg=colors.darkgreen,		fg=colors.black,		gui=colors.none}
+	-- TODO:
+	syntax["@text.todo"] = {gui=styles.rb}
+	-- FIXME:
 	syntax["@text.danger"] = {fg=colors.gray,			bg=colors.red,		gui=styles.rb}
 
 	-- Semantic highlights
 	syntax["@lsp.type.operator.zig"] = {fg=colors.lightmagenta};
-	syntax["@lsp.type.namespace"] = {fg=colors.violet, gui=styles.i};
+	syntax["@lsp.type.namespace"] = {fg=colors.violet};
 	syntax["@lsp.type.property"] = {fg=colors.lightbrown};
-	syntax["@lsp.type.parameter"] = {fg=colors.eyeblue};
-	syntax["@lsp.type.variable"] = {fg=colors.lightcyan, gui=styles.none};
-	syntax["@lsp.type.label"] = {fg=colors.red}
+	syntax["@lsp.type.parameter"] = {fg=colors.blue};
+	syntax["@lsp.type.variable"] = {fg=colors.celeste, gui=styles.none};
+	syntax["@lsp.type.label"] = {fg=colors.red};
+	syntax["@lsp.mod.declaration"] = {gui=styles.i};
 
 	return syntax
 end
