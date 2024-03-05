@@ -137,7 +137,7 @@ function M.load_colors()
 		Tag=			{fg=colors.red,				bg=colors.none,		gui=colors.none};
 		Title=			{fg=colors.white,			bg=colors.none,		gui=styles.bold};
 		Todo=			{fg=colors.black,			bg=colors.darkgreen,gui=colors.none};
- 		Type=			{fg=colors.slateblue,		bg=colors.none,		gui=stylesb};
+ 		Type=			{fg=colors.slateblue,		bg=colors.none,		gui=styles.b};
 		Underlined=		{fg=colors.none,			bg=colors.none,		gui=styles.underline};
 		Whitespace=		{fg=colors.darkgray											};
 
@@ -194,6 +194,7 @@ function M.load_colors()
 	syntax["@lsp.type.variable"] = {fg=colors.celeste, gui=styles.none};
 	syntax["@lsp.type.label"] = {fg=colors.red};
 	syntax["@lsp.mod.declaration"] = {gui=styles.i};
+	syntax["@lsp.type.errorTag"] = {fg=colors.slateblue,		bg=colors.none,		gui=styles.b}
 
 	return syntax
 end
