@@ -180,7 +180,7 @@ function M.load_colors()
 	}
 	-- Treesitter stuff
 	syntax["@attribute.zig"] = {fg=colors.violet};
-	syntax["@variable"] = {gui=styles.none};
+	syntax["@variable"] = {fg=colors.lightcyan, gui=styles.none};
 	syntax["@type.qualifier"] = {fg=colors.seablue};
 	syntax["@keyword.return"] = {fg=colors.rose};
 	syntax["@keyword.repeat"] = {fg=colors.rose};
