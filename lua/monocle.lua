@@ -171,7 +171,7 @@ function M.load_colors()
 
 		diffAdded=		{fg=colors.seagreen };
 		diffRemoved=	{fg=colors.darkred };
-		gitDiff=		{fg=colors.grey };
+		gitDiff=		{fg=colors.gray };
 
 		-- LangStuff, Push this to other places probably
 		RustInlay = {fg=colors.gray};
@@ -195,7 +195,7 @@ function M.load_colors()
 	syntax["@lsp.type.label"] = {fg=colors.red};
 	syntax["@lsp.mod.declaration"] = {gui=styles.i};
 	syntax["@lsp.type.errorTag"] = {fg=colors.slateblue,		bg=colors.none,		gui=styles.b}
-	syntax["@lsp.typemod.comment.documentation"] = {fg=colors.offblack, gui=styles.b}
+	syntax["@lsp.typemod.comment.documentation"] = {fg="#606060", gui=styles.b}
 
 	return syntax
 end
