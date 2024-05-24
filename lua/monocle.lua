@@ -136,8 +136,8 @@ function M.load_colors()
 		String=			{fg=colors.seagreen,		bg=colors.none,		gui=colors.none};
 		Tag=			{fg=colors.red,				bg=colors.none,		gui=colors.none};
 		Title=			{fg=colors.white,			bg=colors.none,		gui=styles.bold};
-		Todo=			{fg=colors.gray,			bg=colors.red,		gui=styles.rb};
- 		Type=			{fg=colors.slateblue,		bg=colors.none,		gui=stylesb};
+		Todo=			{fg=colors.black,			bg=colors.darkgreen,gui=colors.none};
+ 		Type=			{fg=colors.slateblue,		bg=colors.none,		gui=styles.b};
 		Underlined=		{fg=colors.none,			bg=colors.none,		gui=styles.underline};
 		Whitespace=		{fg=colors.darkgray											};
 
@@ -180,16 +180,11 @@ function M.load_colors()
 	}
 	-- Treesitter stuff
 	syntax["@attribute.zig"] = {fg=colors.violet};
-	syntax["@variable"] = {gui=styles.none};
+	syntax["@variable"] = {fg=colors.lightcyan, gui=styles.none};
 	syntax["@type.qualifier"] = {fg=colors.seablue};
 	syntax["@keyword.return"] = {fg=colors.rose};
 	syntax["@keyword.repeat"] = {fg=colors.rose};
 	syntax["@keyword.conditional"] = {fg=colors.rose};
-
-	-- TODO:
-	syntax["@text.todo"] = {gui=styles.rb}
-	-- FIXME:
-	syntax["@text.danger"] = {fg=colors.gray,			bg=colors.red,		gui=styles.rb}
 
 	-- Semantic highlights
 	syntax["@lsp.type.operator.zig"] = {fg=colors.lightmagenta};
@@ -199,6 +194,7 @@ function M.load_colors()
 	syntax["@lsp.type.variable"] = {fg=colors.celeste, gui=styles.none};
 	syntax["@lsp.type.label"] = {fg=colors.red};
 	syntax["@lsp.mod.declaration"] = {gui=styles.i};
+	syntax["@lsp.type.errorTag"] = {fg=colors.slateblue,		bg=colors.none,		gui=styles.b}
 
 	return syntax
 end
@@ -218,7 +214,7 @@ function M.colorscheme()
 	end
 end
 
-M.colorscheme()
+-- M.colorscheme()
 
 return M
 
