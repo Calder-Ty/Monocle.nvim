@@ -3,40 +3,48 @@ local api =	vim.api;
 local M = {};
 
 M.colors = {
+	rose=			'#fA3592';
 	red=			'#f92672';
-	darkred=		'#79092f';
 	lightmagenta=	'#c72c77';
+	darkred=		'#79092f';
 
+	orange=			'#FFb436';
+	creamsicle=		'#EA9507';
 
 	brown=			'#ff8080';
+	lightbrown=		'#f06795';
 
- 	yellow=			'#ceb489';
+	yellow=			'#ffbf80';
 	lightyellow=	'#e6db74';
 
-    darkgreen=		'#088001';
+	darkgreen=		'#088001';
 	green=			'#46830c';
-    seagreen=		'#5e8b56';
+	limegreen=		'#98f842';
+	seagreen=		'#5e8b56';
 
 	lightblue=		'#3a8998';
-    blue=			'#3f76ce';
+	seablue=		'#546883';
+	blue=			'#3f76ce';
 	slateblue=		'#106474';
 	darkblue =		'#204a87';
 	cobalt=			"#243955";
 
-    cyan=			'#a1efe4';
-    lightcyan=		'#66d9ef';
+	cyan=			'#a1efe4';
+	lightcyan=		'#66d9ef';
+	celeste=		'#1db4d0';
 	specialcyan=    '#078c8c';
 
 	lightpurple=	'#ff80ff';
 	violet=			'#8f40ff';
+	deeppurple=		'#6B04FB';
 
 	white=			'#f8f8f2';
-    lightgray=		'#adafaf';
-    gray=			'#7d7d7d';
-    darkgray=		'#434343';
+	lightgray=		'#adafaf';
+	gray=			'#7d7d7d';
+	darkgray=		'#434343';
 	offblack=		'#303044';
 	shaddow=		'#272822';
-    black=			'#222222';
+	black=			'#222222';
 
 	none=			'NONE';
 }
@@ -112,7 +120,7 @@ function M.load_colors()
 		Float=			{fg=colors.lightpurple,		bg=colors.none,		gui=colors.none};
 		Folded=			{fg=colors.gray,			bg=colors.shadow,	gui=colors.none};
 		Function=		{fg=colors.lightmagenta,	bg=colors.none,		gui=colors.none};
-		Identifier=		{fg=colors.lightcyan,		bg=colors.none,		gui=styles.italic};
+		Identifier=		{fg=colors.lightcyan,		bg=colors.none,		gui=styles.none};
 		Keyword=		{fg=colors.specialcyan,		bg=colors.none,		gui=styles.bold};
 		Label=			{fg=colors.lightyellow,		bg=colors.none,		gui=colors.none};
 		NonText=		{fg=colors.none,			bg=colors.none,		gui=colors.none};
@@ -124,12 +132,12 @@ function M.load_colors()
 		Special=		{fg=colors.specialcyan,		bg=colors.none,		gui=colors.none};
 		SpecialKey=		{fg=colors.darkgray,		bg=colors.offblack, gui=colors.none};
 		Statement=		{fg=colors.lightblue,		bg=colors.none,		gui=colors.none};
-		StorageClass=	{fg=colors.lightcyan,		bg=colors.none,		gui=styles.italic};
+		StorageClass=	{fg=colors.lightcyan,		bg=colors.none,		gui=styles.none};
 		String=			{fg=colors.seagreen,		bg=colors.none,		gui=colors.none};
 		Tag=			{fg=colors.red,				bg=colors.none,		gui=colors.none};
 		Title=			{fg=colors.white,			bg=colors.none,		gui=styles.bold};
 		Todo=			{fg=colors.gray,			bg=colors.red,		gui=styles.rb};
- 		Type=			{fg=colors.blue,			bg=colors.none,		gui=colors.none};
+ 		Type=			{fg=colors.slateblue,		bg=colors.none,		gui=stylesb};
 		Underlined=		{fg=colors.none,			bg=colors.none,		gui=styles.underline};
 		Whitespace=		{fg=colors.darkgray											};
 
@@ -150,9 +158,6 @@ function M.load_colors()
 		DiagnosticVirtualTextInfo=  {fg=colors.white,	bg=colors.none};
 		DiagnosticVirtualTextWarn=  {fg=colors.brown,	bg=colors.none};
 
-		-- adjustments
-
-
 		-- Supported Plugins:
 		--
 		-- GitGutter
@@ -171,7 +176,30 @@ function M.load_colors()
 		-- LangStuff, Push this to other places probably
 		RustInlay = {fg=colors.gray};
 		pythonEscape = {fg="#ae81ff"};
+
 	}
+	-- Treesitter stuff
+	syntax["@attribute.zig"] = {fg=colors.violet};
+	syntax["@variable"] = {gui=styles.none};
+	syntax["@type.qualifier"] = {fg=colors.seablue};
+	syntax["@keyword.return"] = {fg=colors.rose};
+	syntax["@keyword.repeat"] = {fg=colors.rose};
+	syntax["@keyword.conditional"] = {fg=colors.rose};
+
+	-- TODO:
+	syntax["@text.todo"] = {gui=styles.rb}
+	-- FIXME:
+	syntax["@text.danger"] = {fg=colors.gray,			bg=colors.red,		gui=styles.rb}
+
+	-- Semantic highlights
+	syntax["@lsp.type.operator.zig"] = {fg=colors.lightmagenta};
+	syntax["@lsp.type.namespace"] = {fg=colors.violet};
+	syntax["@lsp.type.property"] = {fg=colors.lightbrown};
+	syntax["@lsp.type.parameter"] = {fg=colors.blue};
+	syntax["@lsp.type.variable"] = {fg=colors.celeste, gui=styles.none};
+	syntax["@lsp.type.label"] = {fg=colors.red};
+	syntax["@lsp.mod.declaration"] = {gui=styles.i};
+
 	return syntax
 end
 
