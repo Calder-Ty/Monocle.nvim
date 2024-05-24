@@ -195,7 +195,7 @@ function M.load_colors()
 	syntax["@lsp.type.label"] = {fg=colors.red};
 	syntax["@lsp.mod.declaration"] = {gui=styles.i};
 	syntax["@lsp.type.errorTag"] = {fg=colors.slateblue,		bg=colors.none,		gui=styles.b}
-	syntax["@lsp.typemod.comment.documentation"] = {fg=colors.shaddow	,					gui=styles.b}
+	syntax["@lsp.typemod.comment.documentation"] = {fg=colors.offblack, gui=styles.b}
 
 	return syntax
 end
