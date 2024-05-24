@@ -83,7 +83,7 @@ function M.load_colors()
 		--Screen tooling
 		ColorColumn=	{fg=colors.none,			bg=colors.black,	gui=colors.none};
 		CursorColumn=	{fg=colors.none,			bg=colors.offblack, gui=colors.none};
-		Cursor=			{fg=colors.shadow,			bg=colors.white,	gui=colors.none};
+		Cursor=			{fg=colors.shaddow,			bg=colors.white,	gui=colors.none};
 		CursorLine=		{							bg=colors.offblack					};
 		CursorLineNr=	{fg=colors.slateblue,							gui=styles.bold};
 		IncSearch=		{fg=colors.yellow,			bg=colors.black,	gui=styles.r};
@@ -118,7 +118,7 @@ function M.load_colors()
 		Define=			{fg=colors.red,				bg=colors.none,		gui=colors.none};
 		Directory=		{fg=colors.violet,			bg=colors.none,		gui=colors.none};
 		Float=			{fg=colors.lightpurple,		bg=colors.none,		gui=colors.none};
-		Folded=			{fg=colors.gray,			bg=colors.shadow,	gui=colors.none};
+		Folded=			{fg=colors.gray,			bg=colors.shaddow,	gui=colors.none};
 		Function=		{fg=colors.lightmagenta,	bg=colors.none,		gui=colors.none};
 		Identifier=		{fg=colors.lightcyan,		bg=colors.none,		gui=styles.none};
 		Keyword=		{fg=colors.specialcyan,		bg=colors.none,		gui=styles.bold};
@@ -195,6 +195,7 @@ function M.load_colors()
 	syntax["@lsp.type.label"] = {fg=colors.red};
 	syntax["@lsp.mod.declaration"] = {gui=styles.i};
 	syntax["@lsp.type.errorTag"] = {fg=colors.slateblue,		bg=colors.none,		gui=styles.b}
+	syntax["@lsp.typemod.comment.documentation"] = {fg=colors.shaddow	,					gui=styles.b}
 
 	return syntax
 end
@@ -213,8 +214,6 @@ function M.colorscheme()
 		M.highlight(group, style)
 	end
 end
-
--- M.colorscheme()
 
 return M
 
